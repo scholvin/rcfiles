@@ -17,5 +17,4 @@ fi
 # export ENV variables as needed 
 
 export OTHER=HELLO
-
-
+export PROCPS_USERLEN=12
