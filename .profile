@@ -10,11 +10,9 @@ fi
 
 # export ENV variables as needed 
 
+export OTHER=HELLO
+export PROCPS_USERLEN=12
+
 if [ -f ${HOME}/.profile.${HOSTNAME} ]; then
   source ${HOME}/.profile.${HOSTNAME}
 fi
-
-# export ENV variables as needed 
-
-export OTHER=HELLO
-export PROCPS_USERLEN=12
