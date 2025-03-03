@@ -360,7 +360,7 @@ ulimit -c unlimited
 # aliases for all environments
 alias ls="$LSCMD $LSARG"
 alias la="$LSCMD $LSARG -a"
-alias ll="$LSCMD $LSARG -FLgsA"
+alias ll="$LSCMD $LSARG -FlLAs"
         
 alias df='df -k'
 alias du='du -k'
