@@ -377,6 +377,7 @@ alias egrep='egrep --color=auto --directories=skip'
 alias sqlite=sqlite3
 
 alias sudo="PS1='\[\e[0;31m\]\u@\h:\w\[\e[0m\]\\$ ' sudo "
+alias psw="ps axo user:12,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm"
 
 # lastly, don't forget input bindings
 if [ -f $HOME/.inputrc ] ; then
