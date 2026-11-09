@@ -332,12 +332,14 @@ case $OSTYPE in
         unset a b c d e
         export LSARG='--color=auto'
         # better directory navigation
-        if [ "${BASH_VERSINFO[0]}" == "4" ]  # TODO make this >= 4
+        if [ "${BASH_VERSINFO[0]}" -ge "4" ]
         then
             # Prepend cd to directory names automatically
             shopt -s autocd
             # Correct spelling errors during tab-completion
             shopt -s dirspell
+            # Dont do the horrible thing with backslashing $
+            shopt -s direxpand
         fi
         # Correct spelling errors in arguments supplied to cd
         shopt -s cdspell
@@ -378,6 +380,7 @@ alias sqlite=sqlite3
 
 alias sudo="PS1='\[\e[0;31m\]\u@\h:\w\[\e[0m\]\\$ ' sudo "
 alias psw="ps axo user:12,pid,pcpu,pmem,vsz,rss,tty,stat,start,time,comm"
+alias myip="curl -s http://ip-api.com/json/ | jq"
 
 # lastly, don't forget input bindings
 if [ -f $HOME/.inputrc ] ; then
